@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_container"
+    android:backgroundTint="@color/backgroundSecondary">
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/fillQuaternary" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/reward_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:layout_below="@id/line">
+
+        <ImageView
+            android:id="@+id/reward_img"
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_placeholder_square"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="1:1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="94dp"
+            app:layout_constraintBottom_toBottomOf="@+id/reward_img"
+            app:layout_constraintStart_toEndOf="@+id/reward_img"
+            app:layout_constraintTop_toTopOf="@+id/reward_img">
+
+            <TextView
+                android:id="@+id/article_title"
+                style="@style/TextBase_Bold"
+                android:lineHeight="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/textPrimary"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore?" />
+
+            <TextView
+                android:id="@+id/article_subtitle"
+                style="@style/TextExtraSmall_Regular"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/textSecondary"
+                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore?" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_below="@id/reward_container"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/fillQuaternary" />
+
+</RelativeLayout>

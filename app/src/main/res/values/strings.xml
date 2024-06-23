@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Trashscan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="location_not_available">Lokasi tidak tersedia</string>
+    <string name="bank_count">%1$d Tempat</string>
+</resources>

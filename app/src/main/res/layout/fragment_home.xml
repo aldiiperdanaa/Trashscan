@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundSecondary"
+    tools:context=".fragment.HomeFragment">
+
+    <ImageView
+        android:id="@+id/hero_trashscan"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/img_hero_trashscan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/point_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_point_container"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="-31dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/hero_trashscan">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/img_point"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/point"
+                style="@style/TextBase_Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1.000 Point"
+                android:textColor="@color/textPrimary"/>
+
+            <TextView
+                style="@style/TextExtraSmall_Regular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap untuk menukar poin"
+                android:textColor="@color/textSecondary"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <ImageButton
+                android:id="@+id/btn_search"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:padding="7dp"
+                android:src="@drawable/ic_search"
+                android:background="@drawable/btn_circle"
+                android:backgroundTint="@color/backgroundPrimary"
+                app:tint="@color/textSecondary"/>
+
+            <ImageButton
+                android:id="@+id/btn_barcode"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:padding="7dp"
+                android:src="@drawable/ic_barcode"
+                android:background="@drawable/btn_circle"
+                android:backgroundTint="@color/backgroundPrimary"
+                app:tint="@color/primary500"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/locate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/point_container">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_map_filled"
+            app:tint="@color/primary200"
+            android:layout_marginEnd="6dp"/>
+
+        <TextView
+            android:id="@+id/location"
+            style="@style/TextBase_Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Paccerakkang, Makassar"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextExtraSmall_Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lokasi Anda saat ini"
+        android:textColor="@color/primary50"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/locate"/>
+    
+    <LinearLayout
+        android:id="@+id/nearest_trash_bank_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/point_container">
+
+        <TextView
+            style="@style/TextLarge_Medium"
+            android:fontFamily="@font/rubik_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Bank Sampah Terdekat"
+            android:textColor="@color/textPrimary"/>
+
+        <TextView
+            style="@style/TextBase_SemiBold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lihat semua"
+            android:textColor="@color/primary500"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/adapter_trash_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/nearest_trash_bank_heading"
+        tools:listitem="@layout/adapter_bank"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

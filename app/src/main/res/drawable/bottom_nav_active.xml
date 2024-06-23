@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- Garis horizontal di bagian atas -->
+	<item>
+		<shape>
+			<solid android:color="@color/primary500"/>
+			<size android:height="4dp"/>
+		</shape>
+	</item>
+	<!-- Background dengan gradient di bawah garis -->
+	<item android:top="4dp">
+		<shape>
+			<gradient
+				android:startColor="#FFC3F0D7"
+				android:centerColor="#FFFFFFFF"
+				android:endColor="#FFFFFFFF"
+				android:angle="270"/>
+		</shape>
+	</item>
+</layer-list>

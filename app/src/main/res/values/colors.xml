@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Background Colors -->
+    <color name="backgroundPrimary">#FFFFFFFF</color>
+    <color name="backgroundSecondary">#FFF2F2F7</color>
+
+    <!-- Text Colors -->
+    <color name="textPrimary">#FF000000</color>
+    <color name="textSecondary">#993C3C43</color>
+    <color name="textTertiary">#4D3C3C43</color>
+    <color name="textQuaternary">#2E3C3C43</color>
+
+    <!-- Fill Colors -->
+    <color name="fillPrimary">#33787880</color>
+    <color name="fillSecondary">#29787880</color>
+    <color name="fillTertiary">#1F767680</color>
+    <color name="fillQuaternary">#14747480</color>
+
+    <!-- Primary Colors -->
+    <color name="primary50">#FFEFFEF4</color>
+    <color name="primary100">#FFD8FFE8</color>
+    <color name="primary200">#FFB4FED3</color>
+    <color name="primary300">#FF7AFBB1</color>
+    <color name="primary400">#FF39EF87</color>
+    <color name="primary500">#FF0EC55D</color>
+    <color name="primary600">#FF06B351</color>
+    <color name="primary700">#FF098C42</color>
+    <color name="primary800">#FF0D6E38</color>
+    <color name="primary900">#FF0D5A31</color>
+    <color name="primary950">#FF003318</color>
+
+    <!-- Secondary Colors -->
+    <color name="secondary50">#FFFFF9EB</color>
+    <color name="secondary100">#FFFEEFC7</color>
+    <color name="secondary200">#FFFDDD8A</color>
+    <color name="secondary300">#FFFCCB4D</color>
+    <color name="secondary400">#FFFBBF24</color>
+    <color name="secondary500">#FFF5B40B</color>
+    <color name="secondary600">#FFD99E06</color>
+    <color name="secondary700">#FFB48409</color>
+    <color name="secondary800">#FF926D0E</color>
+    <color name="secondary900">#FF785B0F</color>
+    <color name="secondary950">#FF453303</color>
+
+    <color name="danger">#FFFF3535</color>
+    <color name="high">#FFDC990E</color>
+    <color name="medium">#6DAE10</color>
+
+</resources>

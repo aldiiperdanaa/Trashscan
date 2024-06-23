@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/backgroundSecondary"
+    android:fitsSystemWindows="true"
+    tools:context=".fragment.BankFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="72dp">
+
+        <!-- Navbar -->
+        <LinearLayout
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="34dp"
+            android:background="@color/primary500"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="2dp">
+
+                    <ImageView
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_map_filled"
+                        app:tint="@color/primary300"
+                        android:layout_marginEnd="4dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lokasi Anda"
+                        android:textColor="@color/primary200"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextBase_Bold"
+                    android:textColor="@color/white"
+                    android:text="Lokasi Anda disini"
+                    tools:text="Paccerakkang"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <ImageButton
+                    android:id="@+id/btn_history"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_history"
+                    android:background="@drawable/btn_circle"
+                    android:backgroundTint="@color/primary500"
+                    app:tint="@color/white"
+                    android:layout_marginEnd="6dp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_book_open"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_book_open"
+                    android:background="@drawable/btn_circle"
+                    android:backgroundTint="@color/primary500"
+                    app:tint="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_point_container"
+            android:paddingHorizontal="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="-22dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/navbar">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_search"
+                app:tint="@color/textSecondary"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/search_trash_bank"
+                style="@style/TextBase_Regular"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Cari bank sampah disini..."
+                android:textColor="@color/textTertiary"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="24dp"
+                    android:background="@drawable/btn_circle"
+                    android:backgroundTint="@color/fillPrimary"
+                    android:layout_marginHorizontal="4dp"/>
+
+                <ImageButton
+                    android:id="@+id/btn_barcode"
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:padding="7dp"
+                    android:src="@drawable/ic_barcode"
+                    android:background="@drawable/btn_circle"
+                    android:backgroundTint="@color/backgroundPrimary"
+                    app:tint="@color/primary500"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/search_container"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="12dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="12dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_rounded_container">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/img_point"
+                        android:layout_marginEnd="5dp"/>
+
+                    <TextView
+                        style="@style/TextExtraSmall_Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trashscan Point"
+                        android:textColor="@color/textPrimary"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/point"
+                    style="@style/Heading6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/textPrimary"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="12dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_rounded_container">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/img_love"
+                        android:layout_marginEnd="5dp"/>
+
+                    <TextView
+                        style="@style/TextExtraSmall_Regular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sampah Terkumpul"
+                        android:textColor="@color/textPrimary"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/trash"
+                    style="@style/Heading6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/textPrimary"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gift_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="-7dp"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout">
+
+            <LinearLayout
+                android:id="@+id/gift"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/bg_rounded_no_stroke_container_ripple"
+                android:backgroundTint="@color/secondary500"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/gift_heading"
+                    style="@style/TextBase_Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trashscan Gift"
+                    android:textColor="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/TextExtraSmall_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap disini untuk menukar rewards"
+                    android:textColor="@color/secondary100"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/gift_heading" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_trashscan_gift"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/gift"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/trash_bank_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@id/gift_container">
+
+            <TextView
+                style="@style/TextLarge_Medium"
+                android:fontFamily="@font/rubik_medium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Bank Sampah"
+                android:textColor="@color/textPrimary"/>
+
+            <TextView
+                android:id="@+id/trash_total"
+                style="@style/TextBase_SemiBold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="10 Tempat"
+                android:textColor="@color/textSecondary"/>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/filter_trash_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/trash_bank_heading">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="12dp"
+                android:paddingBottom="4dp"
+                tools:paddingBottom="16dp">
+
+                <android.widget.Button
+                    android:id="@+id/btn_all"
+                    style="@style/TextSmall_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:minWidth="0dp"
+                    android:background="@drawable/btn_circle"
+                    android:backgroundTint="@color/primary500"
+                    android:outlineProvider="none"
+                    android:paddingHorizontal="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:letterSpacing="0"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Semua"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <android.widget.Button
+                    android:id="@+id/btn_nearest"
+                    style="@style/TextSmall_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:minWidth="0dp"
+                    android:background="@drawable/btn_circle"
+                    android:backgroundTint="@color/fillSecondary"
+                    android:outlineProvider="none"
+                    android:paddingHorizontal="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textSecondary"
+                    android:letterSpacing="0"
+                    android:layout_marginEnd="8dp"
+                    android:text="Terdekat"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <android.widget.Button
+                    android:id="@+id/btn_highest_redemption"
+                    style="@style/TextSmall_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:background="@drawable/btn_circle"
+                    android:backgroundTint="@color/fillSecondary"
+                    android:outlineProvider="none"
+                    android:paddingHorizontal="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textSecondary"
+                    android:letterSpacing="0"
+                    android:layout_marginEnd="8dp"
+                    android:text="Penukaran Tertinggi"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+
+                <android.widget.Button
+                    android:id="@+id/btn_farthest"
+                    style="@style/TextSmall_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:minWidth="0dp"
+                    android:background="@drawable/btn_circle"
+                    android:backgroundTint="@color/fillSecondary"
+                    android:outlineProvider="none"
+                    android:paddingHorizontal="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textSecondary"
+                    android:letterSpacing="0"
+                    android:layout_marginEnd="8dp"
+                    android:text="Terjauh"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <android.widget.Button
+                    android:id="@+id/btn_lowest_redemption"
+                    style="@style/TextSmall_Regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:background="@drawable/btn_circle"
+                    android:backgroundTint="@color/fillSecondary"
+                    android:outlineProvider="none"
+                    android:paddingHorizontal="14dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/textSecondary"
+                    android:letterSpacing="0"
+                    android:layout_marginEnd="16dp"
+                    android:text="Penukaran Terendah"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/adapter_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            tools:layout_marginHorizontal="16dp"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/filter_trash_bank"
+            android:paddingBottom="4dp"
+            tools:listitem="@layout/adapter_bank"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:indeterminateTint="@color/primary500"
+            app:layout_constraintTop_toBottomOf="@+id/filter_trash_bank"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

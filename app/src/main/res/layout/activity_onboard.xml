@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundSecondary"
+    tools:context=".activity.OnboardActivity">
+
+    <ImageView
+        android:id="@+id/hero_onboarding"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/img_hero_onboarding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/welcome"
+        style="@style/Heading5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selamat Datang di Trashscan"
+        android:textAlignment="center"
+        android:textColor="@color/textPrimary"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hero_onboarding" />
+
+    <TextView
+        style="@style/TextBase_Regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor"
+        android:textAlignment="center"
+        android:textColor="@color/textSecondary"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <android.widget.Button
+        android:id="@+id/btn_register"
+        style="@style/TextBase_SemiBold"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_rounded_no_stroke_container_ripple"
+        android:backgroundTint="@color/backgroundSecondary"
+        android:outlineProvider="none"
+        android:textAllCaps="false"
+        android:textColor="@color/primary500"
+        android:letterSpacing="0"
+        android:text="Daftar"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/btn_login"
+        style="@style/TextBase_Bold"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_rounded_no_stroke_container_ripple"
+        android:backgroundTint="@color/primary500"
+        android:outlineProvider="none"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:letterSpacing="0"
+        android:text="Masuk"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_register" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
